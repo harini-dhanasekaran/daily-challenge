@@ -13,7 +13,7 @@ int substring(string s){
     return result;
 }
 int main(){
-    string s="iooitp!p";
+    string s="abcart";
     cout<<substring(s);
     return 0;
 }
