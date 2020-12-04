@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 using namespace std;
 struct Node{
     int data;
@@ -11,6 +12,7 @@ void insert(int data){
     Node *c,*t=root,*r;
     if(root==NULL){
         c=new Node(data);
+        root=c;
         return;
     }
         
@@ -28,8 +30,20 @@ void insert(int data){
       r->right=c;
     else if(data<r->data)
       r->left=c;
-    
-    
+}
+void lvlTraversal(){
+    queue<Node*> que;
+    Node* p=root;
+    que.push(p);
+    while(!que.empty()){
+      p=que.front();
+      que.pop();
+      cout<<p->data<<" ";
+      if(p->left!=NULL)
+        que.push(p->left);
+      if(p->right!=NULL)
+        que.push(p->right);
+    }
 }
 int main() {
     insert(10);
@@ -39,5 +53,6 @@ int main() {
     insert(15);
     insert(7);
     insert(25);
+    lvlTraversal();
     return 0;
 }
