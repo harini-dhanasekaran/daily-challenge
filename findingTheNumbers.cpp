@@ -1,5 +1,10 @@
-//https://practice.geeksforgeeks.org/problems/finding-the-numbers0215/1#
+//https://practice.geeksforgeeks.org/problems/finding-the-numbers0215/1
 //can be solved easily by using o(n)space addtional i.e using map
+/*
+Given an array A containing 2*N+2 positive numbers, out of which 2*N numbers exist in pairs whereas 
+the other two number occur exactly once and are distinct. 
+Find the other two numbers  (in ascending order)
+*/
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> singleNumber(vector<int>& nums) 
@@ -21,6 +26,7 @@ vector<int> singleNumber(vector<int>& nums)
         //     nums[1]=temp;
         // }
         // return nums;
+
         //corret but time consuming <2.25s
         // int size=nums.size(),temp;
         // for(int i=0;i<size;i++){
